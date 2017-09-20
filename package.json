@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/FabianoEger/tracker-bot#readme",
   "dependencies": {
-    "express": "^4.15.4"
+    "express": "^4.15.4",
+    "telegraf": "^3.11.1"
   }
 }
