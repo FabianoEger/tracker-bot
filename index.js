@@ -37,10 +37,6 @@ bot.command('rastrear', ({from, reply, message}) => {
     return reply('Desculpe, eu ainda não fui preparado para responder isso! :(');
 });
 
-bot.command('', ({reply}) => {
-    reply('Use /cep espaco número do seu CEP ou /rastrear código de rastreio do seu objeto');
-});
-
 bot.startPolling();
 
 app.listen(app.get('port'), () => {
