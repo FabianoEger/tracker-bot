@@ -1,5 +1,6 @@
 const Telegraf = require('telegraf');
 const express  = require('express');
+const getCep   = require('./services/cep.js');
 
 const bot = new Telegraf(process.env.BOT_TOKEN);
 const app = express();
@@ -13,6 +14,14 @@ app.get('/', (req, res) => {
 bot.command('start', ({from, reply}) => {
     console.log('start', from);
     return reply('Welcome!');
+});
+
+bot.command('cep', ({from, reply, message}) => {
+    return reply('CEP test');
+});
+
+bot.command('rastrear', ({from, reply}) => {
+    return reply('Rastreae test');
 });
 
 bot.startPolling();
