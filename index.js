@@ -19,6 +19,7 @@ bot.command('start', ({from, reply}) => {
 });
 
 bot.command('cep', ({from, reply, message}) => {
+    console.log('cep', from,  message.text);
     if (message.text.length <= 4) return reply('Você deve passar o número do seu CEP'); 
     let cep = message.text.substring(message.entities[0].length, message.text.length);
     cep = trim(cep);
@@ -31,7 +32,8 @@ bot.command('cep', ({from, reply, message}) => {
     }).catch(() => reply('CEP inválido :(')); 
 });
 
-bot.command('rastrear', ({from, reply}) => {
+bot.command('rastrear', ({from, reply, message}) => {
+    console.log('rastrear', from,  message.text);
     return reply('Desculpe, eu ainda não fui preparado para responder isso! :(');
 });
 
